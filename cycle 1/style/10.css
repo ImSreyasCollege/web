@@ -1,0 +1,13 @@
+body{
+    flex-direction: column;
+    padding: 1rem 3rem;
+}
+body *{
+    cursor: pointer;
+}
+body > div{
+    padding-block: 1rem;
+}
+body dl dt{
+    padding-block: .25rem;
+}

@@ -1,0 +1,17 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100vw;
+}
+body div{
+    margin-block: 1rem;
+    font-weight: 600;
+}
+body div li{
+    font-weight: 400;
+    transform: translateX(4rem);
+}

@@ -1,0 +1,24 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100vw;
+}
+body div{
+    width: 50rem;
+}
+body span{
+    display: inline;
+}
+.first{
+ font-family: "Poppins", sans-serif;
+}
+.second{
+ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.third{
+ font-family:'Courier New', Courier, monospace;
+}
