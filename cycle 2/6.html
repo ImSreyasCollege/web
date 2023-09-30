@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        body div{
+            width: 100%;
+            text-align: center;
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        form{
+            width: min(50rem, 80vw);
+        }
+        form label{
+            display: block;
+            width: 100%;
+            text-align: start;
+
+            padding: .5rem;
+        }
+        form input{
+            display: block;
+            width: 100%;
+
+            border: 1px solid gray;
+            padding: 1rem 1.2rem;
+            border-radius: 1rem;
+        }
+        form textarea{
+            display: block;
+            width: 100%;
+            resize: vertical;
+
+            border: 1px solid gray;
+            padding: 1rem 1.2rem;
+            border-radius: 1rem;
+        }
+        .label-main{
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        .label{
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        .rad-wrapper input{
+            display: inline-block;
+            width: auto;
+        }
+        .rad-wrapper{
+            display: block;
+            text-align: start;
+        }
+    </style>
+</head>
+<body>
+    <div class="label-main">The world of fruits</div>
+    <div class="form">
+        <form>
+            <div class="label">fruit survay</div>
+            <label>name</label>
+            <input type="text" />
+            <label>address</label>
+            <textarea rows="4"></textarea>
+            <label>email</label>
+            <input type="email" />
+            <label>how many pieces of fruite do you eat per day?</label>
+            <div class="rad-wrapper">
+                <input type="radio" name="howmuch" /><span>0</span>
+            </div>
+            <div class="rad-wrapper">
+                <input type="radio" name="howmuch" /><span>1</span>
+            </div>
+            <div class="rad-wrapper">
+                <input type="radio" name="howmuch" /><span>2</span>
+            </div>
+            <div class="rad-wrapper">
+                <input type="radio" name="howmuch" /><span>more than 2</span>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
