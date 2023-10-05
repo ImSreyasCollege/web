@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- name : sreyas & roll.no : 53 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="common.css">
     <style>
+        body{
+            background-color: yellow;
+        }
         body div{
             width: 100%;
             text-align: center;
@@ -59,6 +63,22 @@
             display: block;
             text-align: start;
         }
+        /* .b-wrapper *{
+            display: flex;
+            display: inline-block;
+        } */
+        .submit-btn{
+            display: block;
+            width: 100%;
+            background-color: black;
+            color: white;
+            border: none;
+
+            padding: 1rem 2rem;
+            border-radius: .5rem;
+            cursor: pointer;
+            margin-block: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -85,6 +105,13 @@
             <div class="rad-wrapper">
                 <input type="radio" name="howmuch" /><span>more than 2</span>
             </div>
+            <label>my fav fruits </label>
+            <textarea rows="5"></textarea>
+            <div class="b-wrapper">
+            <lable>would you like a brochure</lable>
+            <input type="checkbox" />
+            </div>
+            <button class="submit-btn" type="submit">submit</button>
         </form>
     </div>
 </body>
