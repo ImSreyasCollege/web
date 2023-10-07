@@ -1,4 +1,4 @@
 # web 
 
-<div style="width:100%;text-align:center;">web programming</div>
+web programming
 ![Visitor Count](https://profile-counter.glitch.me/ImSreyasCollege/count.svg)
