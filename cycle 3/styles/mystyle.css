@@ -1,0 +1,8 @@
+body{
+    background-color: lightblue;
+}
+body h1{
+    color: blue;
+    width: 100%;
+    text-align: center;
+}
