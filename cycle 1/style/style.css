@@ -16,11 +16,18 @@ body{
     max-height: fit-content;
     padding: 4rem 0;
     overflow-x: hidden;
+
 }
-body > div{
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: none;
+    padding: 4rem;
+    gap: .8rem 1rem;
+}
+.wrapper > div{
     border-radius: 1.5rem;
     border: 1px solid rgb(189, 189, 189);
-    margin-block: .5rem;
     width: 20rem;
 }
 body div a {

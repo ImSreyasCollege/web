@@ -27,11 +27,17 @@
             padding: 4rem 0;
             overflow-x: hidden;
         }
+        .wrapper{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: none;
+            padding: 4rem;
+            gap: .8rem 1rem;
+        }
     
-        body>div {
+        .wrapper>div {
             border-radius: 1.5rem;
             border: 1px solid rgb(189, 189, 189);
-            margin-block: .5rem;
             width: 20rem;
         }
     
@@ -45,6 +51,7 @@
     </style>
 </head>
 <body>
+    <div class="wrapper">
     <div><a href="./1.html">question 1</a></div>
     <div><a href="./2.html">question 2</a></div>
     <div><a href="./3.html">question 3</a></div>
@@ -77,5 +84,7 @@
     <div><a href="./30.html">question 30</a></div>
     <div><a href="./31.html">question 31</a></div>
     <div><a href="./32.html">question 32</a></div>
+    <div><a href="./33.html">question 33</a></div>
+    <div><a href="./34.html">question 34</a></div></div>
 </body>
 </html>
