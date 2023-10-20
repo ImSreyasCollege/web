@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calender</title>
+</head>
+<body>
+    <div>
+        <input class="input" type="text" />
+        <button class="btn">generate</button>
+    </div>
+    <div class="calender-wrapper">
+        <div class="calender"></div>
+        <div class="calender"></div>
+        <div class="calender"></div>
+        <div class="calender"></div>
+        <div class="calender"></div>
+        <div class="calender"></div>
+        <div class="calender"></div>
+        <div class="calender"></div>
+        <div class="calender"></div>
+        <div class="calender"></div>
+        <div class="calender"></div>
+        <div class="calender"></div>
+    </div>
+</body>
+<script>
+    const input = document.querySelector(".input");
+    const btn = document.querySelector(".btn");
+    btn.addEventListener("click", ()=>{
+        console.log(btn.target);
+    })
+</script>
+</html>
