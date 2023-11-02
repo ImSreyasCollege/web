@@ -26,3 +26,9 @@ body{
     justify-content: center;
     align-items: center;
 }
+.co{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

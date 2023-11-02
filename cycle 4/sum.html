@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sum</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="all.css">
+    <style>
+        h1{
+            display: block;
+        }
+        input{
+            display: block;
+            margin-block-end: 1rem;
+        }
+        button{
+            width: 100%;
+        }
+        p{
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="co">
+    <h1>Addition of two numbers.</h1>
+    <div>
+        <div>
+            <label>Enter the first number</label>
+            <input type="number" class="input1" />
+            <label>Enter the second number</label>
+            <input type="number" class="input2" />
+            <button class="print" onclick="print()">print</button>
+        </div>
+        <div>
+            <p class="target"></p>
+        </div>
+    </div>
+</body>
+<script>
+    const print = () => {
+        const input1 = document.querySelector(".input1")
+        const input2 = document.querySelector(".input2")
+        const target = document.querySelector(".target")
+        const sum = parseInt(input1.value) + parseInt(input2.value)
+        target.innerText = sum
+    }
+</script>
+</html>

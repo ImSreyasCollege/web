@@ -1,0 +1,11 @@
+input{
+    padding: 1rem 2rem;
+    border-radius: .7rem;
+    border: 1px solid gray;
+}
+button{
+    padding: 1rem 2rem;
+    border-radius: .7rem;
+    border: 1px solid gray;
+    cursor: pointer;
+}
