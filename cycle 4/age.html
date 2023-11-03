@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sum</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="all.css">
+    <style>
+        h1{
+            display: block;
+        }
+        input{
+            display: block;
+            margin-block-end: 1rem;
+        }
+        button{
+            width: 100%;
+        }
+        p{
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="co">
+    <h1>Addition of two numbers.</h1>
+    <div>
+        <div>
+            <label>Enter the name</label>
+            <input type="text" class="input1" />
+            <label>Enter the year of birth</label>
+            <input type="number" class="input2" />
+            <button class="print" onclick="print()">print</button>
+        </div>
+        <div>
+            <p class="name"></p>
+            <p class="age"></p>
+        </div>
+    </div>
+</body>
+<script>
+    const print = () => {
+        document.querySelector(".name").innerText = "name is : " + document.querySelector(".input1").value
+        document.querySelector(".age").innerText = "age is : " + (new Date().getFullYear() - parseInt(document.querySelector(".input2").value) || 0)
+    }
+</script>
+</html>
