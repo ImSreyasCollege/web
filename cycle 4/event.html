@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>name</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="all.css">
+    <style>
+        h1{
+            display: block;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="co">
+    <h1>Change the color of the background by just clicking on the button</h1>
+    <div>
+        <button class="print">change</button>
+    </div>
+</body>
+<script>
+    document.querySelector(".print").addEventListener("click", () => {
+        const r = Math.floor(Math.random()*200)
+        const g = Math.floor(Math.random()*200)
+        const b = Math.floor(Math.random()*200)
+        console.log(r, g, b)
+        document.querySelector("body").style.backgroundColor = `rgb(${r}, ${g}, ${b})`
+    })
+</script>
+</html>
