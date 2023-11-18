@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>name</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+*{
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    /* margin: 0;
+    padding: 0; */
+}
+body{
+    width: 100vw;
+    min-height: 100vh;
+    max-height: fit-content;
+    padding: 2rem 3rem;
+    margin: 0;
+    overflow-x: hidden;
+}
+.divider{
+    margin-block: 1rem;
+    border: none !important;
+}
+.common{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.co{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+        h1{
+            display: block;
+        }
+        body>div{
+            width: min(25rem, 90vw);
+            height: auto;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: .2rem;
+        }
+    </style>
+</head>
+<body class="co">
+    <div>
+        <img class="img" src="https://c4.wallpaperflare.com/wallpaper/375/986/399/despicable-me-movies-cgi-minions-wallpaper-preview.jpg" alt="image">
+    </div>
+    <div class="text">hover over the image</div>
+</body>
+<script>
+    const img = document.querySelector(".img")
+    const text = document.querySelector(".text")
+    img.addEventListener("mouseover", ()=> {
+        text.innerText = "Hello, how are you?"
+        img.setAttribute("src", "https://c4.wallpaperflare.com/wallpaper/44/647/725/despicable-me-minions-movies-animated-movies-wallpaper-preview.jpg")
+    })
+    img.addEventListener("mouseout", ()=> {
+        text.innerText = "hover over the image"
+        img.setAttribute("src", "https://c4.wallpaperflare.com/wallpaper/375/986/399/despicable-me-movies-cgi-minions-wallpaper-preview.jpg")
+    })
+</script>
+</html>

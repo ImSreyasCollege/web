@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- name : sreyas & roll.no : 53 -->
     <meta charset="UTF-8">
@@ -10,31 +11,31 @@
         * {
             font-family: "Poppins", sans-serif;
             font-weight: 500;
-    
+
             margin: 0;
             padding: 0;
         }
-    
+
         body {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-    
+
             width: 100vw;
             min-height: 100vh;
             max-height: fit-content;
             padding: 4rem 0;
             overflow-x: hidden;
         }
-    
-        body>div {
+
+        body>div>div {
             border-radius: 1.5rem;
             border: 1px solid rgb(189, 189, 189);
             margin-block: .5rem;
             width: 20rem;
         }
-    
+
         body div a {
             display: block;
             text-decoration: none;
@@ -42,29 +43,38 @@
             padding: 1rem 3rem;
             text-align: center;
         }
+        .wrapper{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: none;
+            padding: 4rem;
+            gap: .8rem 1rem;
+        }
+    
+        .wrapper>div {
+            border-radius: 1.5rem;
+            border: 1px solid rgb(189, 189, 189);
+            width: 20rem;
+        }
     </style>
 </head>
+
 <body>
-    <div><a href="./name.html">question 1</a></div>
-    <div><a href="./sum.html">question 2</a></div>
-    <div><a href="./currentDate.html">question 3</a></div>
-    <div><a href="./4.html">question 4</a></div>
-    <div><a href="./5.html">question 5</a></div>
-    <div><a href="./6.html">question 6</a></div>
-    <div><a href="./7.html">question 7</a></div>
-    <div><a href="./8.html">question 8</a></div>
-    <div><a href="./9.html">question 9</a></div>
-    <div><a href="./10.html">question 10</a></div>
-    <div><a href="./11.html">question 11</a></div>
-    <div><a href="./12.html">question 12</a></div>
-    <div><a href="./13.html">question 13</a></div>
-    <div><a href="./14.html">question 14</a></div>
-    <div><a href="./15.html">question 15</a></div>
-    <div><a href="./16.html">question 16</a></div>
-    <div><a href="./17.html">question 17</a></div>
-    <div><a href="./18.html">question 18</a></div>
-    <div><a href="./19.html">question 19</a></div>
-    <div><a href="./20.html">question 20</a></div>
-    <div><a href="./21.html">question 21</a></div>
+    <div class="wrapper">
+        <div><a href="./name.html">1. name</a></div>
+        <div><a href="./sum.html">2. sum of two numbers</a></div>
+        <div><a href="./currentDate.html">3. current date</a></div>
+        <div><a href="./posOrNeg.html">4. positive or negative </a></div>
+        <div><a href="./colorChange.html">5. change text color</a></div>
+        <div><a href="./backgroundColorChange.html">6. background color</a></div>
+        <div><a href="./prompt.html">7. prompt</a></div>
+        <div><a href="./age.html">8. find age</a></div>
+        <div><a href="./calender.html">9. calendar</a></div>
+        <div><a href="./event.html">10. bg through event</a></div>
+        <div><a href="./hoverImageChange.html">11. image change (hover)</a></div>
+        <div><a href="./formValidation.html">12. form validation</a></div>
+        <div><a href="./quiz.html">13. quiz</a></div>
+    </div>
 </body>
+
 </html>
