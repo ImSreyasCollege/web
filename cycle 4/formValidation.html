@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+        html{
+            scroll-behavior: smooth;
+        }
+        *{
+            font-family: "Poppins", sans-serif;
+            box-sizing: border-box;
+            /* margin: 0;
+            padding: 0; */
+        }
+        body{
+            width: 100vw;
+            min-height: 100vh;
+            max-height: fit-content;
+            padding: 2rem 3rem;
+            margin: 0;
+            overflow-x: hidden;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 2rem 4rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: min(50rem, 80vw);
+        }
+
+        label {
+            margin-block-start: 1.2rem;
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            /*margin-bottom: 16px;*/
+            box-sizing: border-box;
+            border-radius: .4rem;
+            border: 1px solid gray;
+        }
+        .gender-input{
+            display: inline-block;
+            width: auto;
+        }
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.7em;
+            padding: .2rem;
+            display: block;
+        }
+
+        input[type="submit"] {
+            background-color: #000000;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: .4rem;
+            cursor: pointer;
+            margin-block-start: 1.5rem;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1f1f1f;
+        }
+        .non-block{
+            display: inline-block !important;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Form Validation</h2>
+
+    <form id="myForm" onsubmit="return validateForm()">
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" name="firstname">
+        <span id="firstnameError" class="error"></span>
+
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" name="lastname">
+        <span id="lastnameError" class="error"></span>
+
+        <label>Gender:</label>
+        <input class="gender-input" type="radio" id="male" name="gender" value="male">
+        <label for="male" class="non-block">Male</label>
+        <input class="gender-input" type="radio" id="female" name="gender" value="female">
+        <label for="female" class="non-block">Female</label>
+        <input class="gender-input" type="radio" id="other" name="gender" value="other">
+        <label for="other" class="non-block">Other</label>
+        <span id="genderError" class="error"></span>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        <span id="emailError" class="error"></span>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address"></textarea>
+        <span id="addressError" class="error"></span>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone">
+        <span id="phoneError" class="error"></span>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <span id="passwordError" class="error"></span>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword">
+        <span id="confirmPasswordError" class="error"></span>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+function validateForm() {
+    // Reset previous error messages
+    resetErrorMessages();
+
+    var firstname = document.getElementById('firstname').value;
+    var lastname = document.getElementById('lastname').value;
+    var genderOptions = document.getElementsByName('gender');
+    var email = document.getElementById('email').value;
+    var address = document.getElementById('address').value;
+    var phone = document.getElementById('phone').value;
+    var password = document.getElementById('password').value;
+    var confirmPassword = document.getElementById('confirmPassword').value;
+
+    var valid = true;
+
+    // Check for empty fields
+    if (firstname === '') {
+        document.getElementById('firstnameError').innerText = 'First Name is required';
+        valid = false;
+    }
+
+    if (lastname === '') {
+        document.getElementById('lastnameError').innerText = 'Last Name is required';
+        valid = false;
+    }
+
+    // Check for a selected gender
+    var genderSelected = false;
+    for (var i = 0; i < genderOptions.length; i++) {
+        if (genderOptions[i].checked) {
+            genderSelected = true;
+            break;
+        }
+    }
+
+    if (!genderSelected) {
+        document.getElementById('genderError').innerText = 'Gender is required';
+        valid = false;
+    }
+
+    // Check if email is empty and matches the regex pattern
+    if (email === '') {
+        document.getElementById('emailError').innerText = 'Email is required';
+        valid = false;
+    } else {
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            document.getElementById('emailError').innerText = 'Enter a valid email address';
+            valid = false;
+        }
+    }
+
+    if (address === '') {
+        document.getElementById('addressError').innerText = 'Address is required';
+        valid = false;
+    }
+
+    // Check if phone is empty and has exactly 10 digits
+    if (phone === '') {
+        document.getElementById('phoneError').innerText = 'Phone is required';
+        valid = false;
+    } else if (phone.length !== 10 || isNaN(phone)) {
+        document.getElementById('phoneError').innerText = 'Enter a valid 10-digit phone number';
+        valid = false;
+    }
+
+    // Check if password is empty and at least 6 characters long
+    if (password === '') {
+        document.getElementById('passwordError').innerText = 'Password is required';
+        valid = false;
+    } else if (password.length < 6) {
+        document.getElementById('passwordError').innerText = 'Password must be at least 6 characters long';
+        valid = false;
+    }
+
+    if (confirmPassword === '') {
+        document.getElementById('confirmPasswordError').innerText = 'Confirm Password is required';
+        valid = false;
+    }
+
+    // Example: Check if password and confirm password match
+    if (password !== confirmPassword) {
+        document.getElementById('confirmPasswordError').innerText = 'Password and Confirm Password must match';
+        valid = false;
+    }
+
+    return valid; // Form is valid and can be submitted
+}
+
+        function resetErrorMessages() {
+            // Reset all error messages
+            var errorElements = document.getElementsByClassName('error');
+            for (var i = 0; i < errorElements.length; i++) {
+                errorElements[i].innerText = '';
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+
+
