@@ -124,8 +124,11 @@
             const response = await fetch('https://opentdb.com/api.php?amount=10')
             const data = await response.json()
             const result = data.results
+            console.log(JSON.stringify(result))
             create(result)
         } catch (err) {
+            const result = [{"type":"multiple","difficulty":"medium","category":"History","question":"What is the bloodiest event in United States history, in terms of casualties?","correct_answer":"Battle of Antietam","incorrect_answers":["Pearl Harbor","September 11th","D-Day"]},{"type":"multiple","difficulty":"hard","category":"History","question":"Which naval battle was considered the turning point of the Pacific Ocean Theater during World War 2?","correct_answer":"Battle of Midway","incorrect_answers":["Attack on Truk Island","Attack on Pearl Harbor","Battle of the Coral Sea"]},{"type":"multiple","difficulty":"hard","category":"Animals","question":"What is the Gray Wolf&#039;s scientific name?","correct_answer":"Canis Lupus","incorrect_answers":["Canis Aureus","Canis Latrans","Canis Lupus Lycaon"]},{"type":"multiple","difficulty":"medium","category":"Entertainment: Video Games","question":"In the &quot;Call Of Duty: Zombies&quot; map &quot;Moon&quot;, there is a secondary called the QED. What does QED stand for?","correct_answer":"Quantum Entanglement Device","incorrect_answers":["Quad Ectoplasmic Driver","Question Every Dog","Quality Edward Device"]},{"type":"multiple","difficulty":"medium","category":"Entertainment: Film","question":"In the 1999 movie Fight Club, which of these is not a rule of the &quot;fight club&quot;?","correct_answer":"Always wear a shirt","incorrect_answers":["You do not talk about FIGHT CLUB","Only two guys to a fight","Fights will go on as long as they have to"]},{"type":"multiple","difficulty":"medium","category":"Entertainment: Japanese Anime &amp; Manga","question":"What studio animated Fullmetal Alchemist?","correct_answer":"Bones","incorrect_answers":["Trigger","Pierrot","xebec"]},{"type":"multiple","difficulty":"medium","category":"Entertainment: Japanese Anime &amp; Manga","question":"In &quot;A Certain Magical Index,&quot; what is Accelerator able to control?","correct_answer":"Vectors","incorrect_answers":["Velocity","Quantums","Wormholes"]},{"type":"multiple","difficulty":"easy","category":"Entertainment: Music","question":"How many members are there in the band Nirvana?","correct_answer":"Three","incorrect_answers":["Two","Four","Five"]},{"type":"multiple","difficulty":"easy","category":"Geography","question":"What colour is the circle on the Japanese flag?","correct_answer":"Red","incorrect_answers":["White","Yellow","Black"]},{"type":"multiple","difficulty":"easy","category":"Entertainment: Video Games","question":"When was the top-down online RPG &quot;Space Station 13&quot; released?","correct_answer":"2003","incorrect_answers":["2000","2010","2006"]}]
+            create(result)
             console.log(err);
         }
     }
@@ -195,7 +198,6 @@
                 opt.setAttribute("ans", "null")
             })
             document.querySelector(".final").innerText = "?/10"
-
         })
     }
 </script>
