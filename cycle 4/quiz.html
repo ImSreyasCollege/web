@@ -81,6 +81,9 @@
             grid-template-columns: 1fr 2fr .5fr;
             gap: 1rem;
             padding: 2rem 0;
+            position: sticky;
+            bottom: 0;
+            background-color: black;
         }
 
         .tool button {
@@ -128,6 +131,7 @@
     }
     getData()
     const create = (result) => {
+        document.querySelector(".main").innerHTML = ""
         result.forEach((res, index) => {
             //console.log(res.correct_answer)
 
