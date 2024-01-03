@@ -1,3 +1,4 @@
+@import url("common.css");
 body{
     flex-direction: column;
     padding: 1rem 3rem;

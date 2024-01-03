@@ -1,24 +1,17 @@
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+@import url("common.css");
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    height: 100vh;
-    width: 100vw;
+  height: 100vh;
+  width: 100vw;
 }
-body div{
-    width: 50rem;
+body div {
+  width: 80rem;
 }
-body span{
-    display: inline;
+body span {
+  display: inline;
 }
-.first{
- font-family: "Poppins", sans-serif;
-}
-.second{
- font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-.third{
- font-family:'Courier New', Courier, monospace;
-}
+

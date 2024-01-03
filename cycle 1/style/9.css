@@ -1,3 +1,4 @@
+@import url("common.css");
 body img{
     width: min(18rem, 90vw);
     aspect-ratio: 1/1;
