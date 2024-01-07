@@ -8,53 +8,27 @@
     <title>questions</title>
     <link rel="stylesheet" href="common.css">
     <style>
-        * {
-            font-family: "Poppins", sans-serif;
-            font-weight: 500;
-
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
+        body{
+            padding: 2rem 5rem;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-
-            width: 100vw;
-            min-height: 100vh;
-            max-height: fit-content;
-            padding: 4rem 0;
-            overflow-x: hidden;
-        }
-
-        body>div>div {
-            border-radius: 1.5rem;
-            border: 1px solid rgb(189, 189, 189);
-            margin-block: .5rem;
-            width: 20rem;
-        }
-
-        body div a {
-            display: block;
-            text-decoration: none;
-            color: black;
-            padding: 1rem 3rem;
-            text-align: center;
+            height: 90dvh;
         }
         .wrapper{
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: none;
-            padding: 4rem;
-            gap: .8rem 1rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: .5rem;
         }
-    
-        .wrapper>div {
-            border-radius: 1.5rem;
-            border: 1px solid rgb(189, 189, 189);
-            width: 20rem;
+        .wrapper > div{
+            border-radius: .5rem;
+            border: 1px solid gray;
+        }
+        a{
+            display: block;
+            padding: .5rem 2.5rem;
+            text-decoration: none;
+            color: black;
         }
     </style>
 </head>

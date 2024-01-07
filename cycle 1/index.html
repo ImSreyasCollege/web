@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <!-- name : sreyas & roll.no : 53 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -10,8 +9,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="./style/common.css">
+    <style>
+        body{
+            padding: 2rem 5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90dvh;
+        }
+        .wrapper{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: .5rem;
+        }
+        .wrapper > div{
+            border-radius: .5rem;
+            border: 1px solid gray;
+        }
+        a{
+            display: block;
+            padding: .5rem 2.5rem;
+            text-decoration: none;
+            color: black;
+        }
+    </style>
 </head>
 
 <body>
