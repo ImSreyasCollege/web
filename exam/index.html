@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date of birth</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="date" class="date-input" />
+        <button class="submit">submit</button>
+        <p class="display" align="center"></p>
+    </div>
+    <script>
+        document.querySelector(".submit").addEventListener("click", () => {
+            const dobVal = document.querySelector(".date-input").value
+            const dob = new Date(dobVal)
+            const date = new Date()
+            const year = date.getFullYear() - dob.getFullYear()
+            const month = date.getMonth() - dob.getMonth()
+            const day = date.getDate() - dob.getDate()
+            const age = year - 1 + (month >= 0 && day >= 0 ? 1 : 0)
+            document.querySelector(".display").innerText = `Your age is : ${age}`
+        })
+    </script>
+</body>
+</html>

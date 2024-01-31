@@ -1,0 +1,7 @@
+const date = new Date("2024-8-09")
+const dob = new Date("2003-08-08")
+const year = date.getFullYear() - dob.getFullYear()
+const month = date.getMonth() - dob.getMonth()
+const day = date.getDate() - dob.getDate()
+const age = year-1 + (month >= 0 && day >= 0 ? 1 : 0)
+console.log(age)
